@@ -1,0 +1,75 @@
+{
+  type: 'VariableDeclarator',
+  id: {
+    type: 'Identifier',
+    name: 'collect_ratings',
+    optional: false,
+    typeAnnotation: null
+  },
+  init: {
+    type: 'FunctionExpression',
+    id: null,
+    generator: false,
+    async: false,
+    expression: false,
+    params: [],
+    body: {
+      type: 'BlockStatement',
+      body: [],
+      directives: []
+    },
+    defaults: [],
+    rest: null,
+    returnType: null,
+    typeParameters: null
+  }
+}
+
+{
+  type: 'VariableDeclarator',
+  id: {
+    type: 'Identifier',
+    name: 'collect_ratings',
+    optional: false,
+    typeAnnotation: null
+  },
+  init: {
+    type: 'ArrowFunctionExpression',
+    id: null,
+    generator: false,
+    async: false,
+    expression: false,
+    params: [],
+    body: {
+      type: 'BlockStatement',
+      body: [],
+      directives: []
+    },
+    defaults: [],
+    rest: null,
+    returnType: null,
+    typeParameters: null
+  }
+}
+
+{
+  type: 'FunctionDeclaration',
+  id: {
+    type: 'Identifier',
+    name: 'collect_ratings',
+    optional: false
+  },
+  generator: false,
+  async: false,
+  expression: false,
+  params: [],
+  body: {
+    type: 'BlockStatement',
+    body: [],
+    directives: []
+  },
+  defaults: [],
+  rest: null,
+  returnType: null,
+  typeParameters: null
+}

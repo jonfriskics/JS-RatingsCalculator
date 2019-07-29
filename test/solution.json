@@ -1,0 +1,531 @@
+{
+  "type": "Program",
+  "sourceType": "script",
+  "body": [
+    {
+      "type": "VariableDeclaration",
+      "kind": "const",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "init": {
+            "type": "ArrowFunctionExpression",
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "VariableDeclaration",
+                  "kind": "const",
+                  "declarations": [
+                    {
+                      "type": "VariableDeclarator",
+                      "init": {
+                        "type": "ObjectExpression",
+                        "properties": [
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Literal",
+                              "value": "count"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "value": 0
+                            },
+                            "kind": "init",
+                            "computed": false,
+                            "method": false,
+                            "shorthand": false
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Literal",
+                              "value": "sum"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "value": 0
+                            },
+                            "kind": "init",
+                            "computed": false,
+                            "method": false,
+                            "shorthand": false
+                          },
+                          {
+                            "type": "Property",
+                            "key": {
+                              "type": "Literal",
+                              "value": "average"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "value": 0
+                            },
+                            "kind": "init",
+                            "computed": false,
+                            "method": false,
+                            "shorthand": false
+                          }
+                        ]
+                      },
+                      "id": {
+                        "type": "Identifier",
+                        "name": "ratings"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclaration",
+                  "kind": "const",
+                  "declarations": [
+                    {
+                      "type": "VariableDeclarator",
+                      "init": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "Identifier",
+                            "name": "document"
+                          },
+                          "computed": false,
+                          "property": {
+                            "type": "Identifier",
+                            "name": "querySelectorAll"
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "value": ".rating"
+                          }
+                        ]
+                      },
+                      "id": {
+                        "type": "Identifier",
+                        "name": "elements"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "VariableDeclaration",
+                  "kind": "let",
+                  "declarations": [
+                    {
+                      "type": "VariableDeclarator",
+                      "init": {
+                        "type": "Literal",
+                        "value": 0
+                      },
+                      "id": {
+                        "type": "Identifier",
+                        "name": "rating"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "CallExpression",
+                    "callee": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "Identifier",
+                        "name": "elements"
+                      },
+                      "computed": false,
+                      "property": {
+                        "type": "Identifier",
+                        "name": "forEach"
+                      }
+                    },
+                    "arguments": [
+                      {
+                        "type": "ArrowFunctionExpression",
+                        "body": {
+                          "type": "BlockStatement",
+                          "body": [
+                            {
+                              "type": "ExpressionStatement",
+                              "expression": {
+                                "type": "AssignmentExpression",
+                                "left": {
+                                  "type": "Identifier",
+                                  "name": "rating"
+                                },
+                                "operator": "=",
+                                "right": {
+                                  "type": "CallExpression",
+                                  "callee": {
+                                    "type": "Identifier",
+                                    "name": "parseInt"
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "CallExpression",
+                                      "callee": {
+                                        "type": "MemberExpression",
+                                        "object": {
+                                          "type": "MemberExpression",
+                                          "object": {
+                                            "type": "Identifier",
+                                            "name": "element"
+                                          },
+                                          "computed": false,
+                                          "property": {
+                                            "type": "Identifier",
+                                            "name": "id"
+                                          }
+                                        },
+                                        "computed": false,
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "replace"
+                                        }
+                                      },
+                                      "arguments": [
+                                        {
+                                          "type": "Literal",
+                                          "value": "star"
+                                        },
+                                        {
+                                          "type": "Literal",
+                                          "value": ""
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "expression": {
+                                "type": "AssignmentExpression",
+                                "left": {
+                                  "type": "MemberExpression",
+                                  "object": {
+                                    "type": "Identifier",
+                                    "name": "ratings"
+                                  },
+                                  "computed": false,
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "count"
+                                  }
+                                },
+                                "operator": "+=",
+                                "right": {
+                                  "type": "CallExpression",
+                                  "callee": {
+                                    "type": "Identifier",
+                                    "name": "parseInt"
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "MemberExpression",
+                                      "object": {
+                                        "type": "Identifier",
+                                        "name": "element"
+                                      },
+                                      "computed": false,
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "value"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "ExpressionStatement",
+                              "expression": {
+                                "type": "AssignmentExpression",
+                                "left": {
+                                  "type": "MemberExpression",
+                                  "object": {
+                                    "type": "Identifier",
+                                    "name": "ratings"
+                                  },
+                                  "computed": false,
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "sum"
+                                  }
+                                },
+                                "operator": "+=",
+                                "right": {
+                                  "type": "BinaryExpression",
+                                  "left": {
+                                    "type": "Identifier",
+                                    "name": "rating"
+                                  },
+                                  "right": {
+                                    "type": "CallExpression",
+                                    "callee": {
+                                      "type": "Identifier",
+                                      "name": "parseInt"
+                                    },
+                                    "arguments": [
+                                      {
+                                        "type": "MemberExpression",
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "element"
+                                        },
+                                        "computed": false,
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "value"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "operator": "*"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "params": [
+                          {
+                            "type": "Identifier",
+                            "name": "element"
+                          }
+                        ],
+                        "id": null,
+                        "async": false,
+                        "generator": false,
+                        "expression": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "IfStatement",
+                  "test": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "Identifier",
+                        "name": "ratings"
+                      },
+                      "computed": false,
+                      "property": {
+                        "type": "Identifier",
+                        "name": "count"
+                      }
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "value": 0
+                    },
+                    "operator": "!=="
+                  },
+                  "consequent": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "left": {
+                            "type": "MemberExpression",
+                            "object": {
+                              "type": "Identifier",
+                              "name": "ratings"
+                            },
+                            "computed": false,
+                            "property": {
+                              "type": "Identifier",
+                              "name": "average"
+                            }
+                          },
+                          "operator": "=",
+                          "right": {
+                            "type": "BinaryExpression",
+                            "left": {
+                              "type": "MemberExpression",
+                              "object": {
+                                "type": "Identifier",
+                                "name": "ratings"
+                              },
+                              "computed": false,
+                              "property": {
+                                "type": "Identifier",
+                                "name": "sum"
+                              }
+                            },
+                            "right": {
+                              "type": "MemberExpression",
+                              "object": {
+                                "type": "Identifier",
+                                "name": "ratings"
+                              },
+                              "computed": false,
+                              "property": {
+                                "type": "Identifier",
+                                "name": "count"
+                              }
+                            },
+                            "operator": "/"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "alternate": null
+                },
+                {
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "Identifier",
+                    "name": "ratings"
+                  }
+                }
+              ]
+            },
+            "params": [],
+            "id": null,
+            "async": false,
+            "generator": false,
+            "expression": false
+          },
+          "id": {
+            "type": "Identifier",
+            "name": "collect_ratings"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "MemberExpression",
+          "object": {
+            "type": "Identifier",
+            "name": "document"
+          },
+          "computed": false,
+          "property": {
+            "type": "Identifier",
+            "name": "addEventListener"
+          }
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "value": "change"
+          },
+          {
+            "type": "ArrowFunctionExpression",
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "VariableDeclaration",
+                  "kind": "const",
+                  "declarations": [
+                    {
+                      "type": "VariableDeclarator",
+                      "init": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "collect_ratings"
+                        },
+                        "arguments": []
+                      },
+                      "id": {
+                        "type": "Identifier",
+                        "name": "ratings"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "left": {
+                      "type": "MemberExpression",
+                      "object": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "Identifier",
+                            "name": "document"
+                          },
+                          "computed": false,
+                          "property": {
+                            "type": "Identifier",
+                            "name": "querySelector"
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Literal",
+                            "value": "#average"
+                          }
+                        ]
+                      },
+                      "computed": false,
+                      "property": {
+                        "type": "Identifier",
+                        "name": "value"
+                      }
+                    },
+                    "operator": "=",
+                    "right": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "MemberExpression",
+                        "object": {
+                          "type": "MemberExpression",
+                          "object": {
+                            "type": "Identifier",
+                            "name": "ratings"
+                          },
+                          "computed": false,
+                          "property": {
+                            "type": "Identifier",
+                            "name": "average"
+                          }
+                        },
+                        "computed": false,
+                        "property": {
+                          "type": "Identifier",
+                          "name": "toFixed"
+                        }
+                      },
+                      "arguments": [
+                        {
+                          "type": "Literal",
+                          "value": 2
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "params": [],
+            "id": null,
+            "async": false,
+            "generator": false,
+            "expression": false
+          }
+        ]
+      }
+    }
+  ]
+}
