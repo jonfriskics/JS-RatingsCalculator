@@ -1,28 +1,31 @@
 {
-  "name": "js-createjs",
+  "name": "js-ratingscalculator",
   "version": "1.0.0",
-  "description": "Build a Rock Climbing Company Landing Page with HTML & CSS - https://pluralsight.com",
+  "description": "Build an Average Ratings Calculator with Javascript - https://pluralsight.com",
   "scripts": {
-    "start": "lite-server",
+    "start": "ws --hostname localhost --open",
     "test": "cross-env NODE_ENV=test mocha './test/*.test.js' || true",
     "test:module1": "cross-env NODE_ENV=test mocha './test/module1.test.js' || true"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tjbell/JS-CreateJS.git"
+    "url": "git+https://github.com/pluralsight-projects/JS-RatingsCalculator.git"
   },
   "author": "Thomas Bell",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tjbell/JS-CreateJS/issues"
+    "url": "https://github.com/pluralsight-projects/JS-RatingsCalculator/issues"
   },
-  "homepage": "https://github.com/tjbell/JS-CreateJS#readme",
+  "homepage": "https://github.com/pluralsight-projects/JS-RatingsCalculator#readme",
   "dependencies": {
     "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^5.2.0",
-    "dot-object": "^1.8.1",
+    "dot-object": "^1.9.0",
     "jscodeshift": "^0.6.4",
     "mocha": "^6.2.0"
+  },
+  "devDependencies": {
+    "local-web-server": "^3.0.7"
   }
 }
